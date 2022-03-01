@@ -75,8 +75,7 @@ describe('Ogre', () => {
     const human = new Human('Jane');
 
     assert.equal(ogre.swings, 0)
-      ogre.encounter(human);
-      ogre.encounter(human);
+
 
     ogre.swingAt(human);
 

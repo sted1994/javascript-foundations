@@ -7,17 +7,17 @@ class Ogre{
   }
 
   encounter(human){
-    this.swingAt(human);
+    human.encounterCounter++;
+    if(human.noticesOgre()){
+      this.swingAt(human);
+    if(this.swings){
+      human.knockedOut = true;
+    }
+    }
   }
 
   swingAt(human){
-    human.encounterCounter++;
-    if(human.noticesOgre()){
-      this.swings++
-       if(this.swings === 2){
-         human.knockedOut = true;
-       }
-    }
+    this.swings++
   }
 
   apologize(human){
